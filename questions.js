@@ -20,6 +20,37 @@ const menuQuestion = [{
     message: "What is the name of the department?"
   }]
 
+  const addRoleQs =[{
+    type: "input",
+    name: "role_title",
+    message: "What is the title of the role?"
+  },
+  {
+    type: "input",
+    name: "role_salary",
+    message: "What is the salary of this role?"
+  }]
 
+  const addEmployeeQs =[{
+    type: "input",
+    name: "employee_first_name",
+    message: "What is the employee's first name?"
+  },
+  {
+    type: "input",
+    name: "employee_last_name",
+    message: "What is the employee's last name?"
+  }]
 
-  module.exports ={menuQuestion,addDepartmentQs}
+  const updateEmployeeRoleQs =[{
+    type: "input",
+    name: "select_employee",
+    message: "Select employee:"
+  },
+{
+    type: "input",
+    name: "new_role",
+    message: "What is this employee's new role?"
+}]
+
+module.exports ={menuQuestion,addDepartmentQs, addRoleQs, addEmployeeQs, updateEmployeeRoleQs}
