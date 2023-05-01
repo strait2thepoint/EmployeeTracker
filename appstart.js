@@ -1,8 +1,8 @@
 const router = require('express').Router();
 // const allRoutes = require('./allroutes');
-const inquirer = import('inquirer');
+const inquirer = require('inquirer');
 
-router.use('/allRoutes', allRoutes);
+// router.use('/allRoutes', allRoutes);
 
 module.exports = router;
 //should the above be in a different file than the below?  the below would require inquirer then
