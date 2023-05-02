@@ -28,7 +28,7 @@ const menuQuestion = [{
   {
     type: "input",
     name: "role_salary",
-    message: "What is the salary of this role?"
+    message: "What is the salary of this role? (Please enter a numerical value)"
   }]
 
   const addEmployeeQs =[{
