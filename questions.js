@@ -48,9 +48,9 @@ const menuQuestion = [{
     message: "Select employee:"
   },
 {
-    type: "input",
-    name: "new_role",
-    message: "What is this employee's new role?"
+  type: "input",
+  name: "new_role_id",
+  message: "Enter the ID of the new role:",
 }]
 
 module.exports ={menuQuestion,addDepartmentQs, addRoleQs, addEmployeeQs, updateEmployeeRoleQs}

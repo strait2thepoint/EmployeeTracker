@@ -78,7 +78,7 @@ const addDepartment = async () => {
 const addRole = async () => {
     try {
         const answers = await inquirer.prompt(addRoleQs)
-        const [results, metadata] = await sequelize.query(`INSERT INTO role (role_title, role_salary) VALUES ("${answers.role_title}", "${answers.role_salary}")`);
+        const [results, metadata] = await sequelize.query(`INSERT INTO role (title, salary) VALUES ("${answers.role_title}", "${answers.role_salary}")`);
         console.log(results)
         menu()
     } catch (error) {
@@ -89,7 +89,7 @@ const addRole = async () => {
 const addEmployee = async () => {
     try {
       const answers = await inquirer.prompt(addEmployeeQs)
-      const [results, metadata] = await sequelize.query(`INSERT INTO employee (employee_first_name, employee_last_name) VALUES ("${answers.employee_first_name}", "${answers.employee_last_name}")`);
+      const [results, metadata] = await sequelize.query(`INSERT INTO employee (first_name, last_name) VALUES ("${answers.employee_first_name}", "${answers.employee_last_name}")`);
       console.log(results)
         menu()
     } catch (error) {
@@ -97,13 +97,13 @@ const addEmployee = async () => {
     }
   };
   
-  const updateEmployee = async () =>{
+ async function updateEmployeeRole () {
     try {
-      const answers = await inquirer.prompt(updateEmployeeQs)
+      const answers = await inquirer.prompt(updateEmployeeRoleQs)
       const [results, metadata] = await sequelize.query(`
         UPDATE employee
-        SET employee_role_id = ${answers.new_role}
-        WHERE employee_name = "${answers.select_employee}"
+        SET role_id = ${answers.new_role_id}
+        WHERE employee_id = "${answers.select_employee}"
       `);
       console.log(results)
         menu()
